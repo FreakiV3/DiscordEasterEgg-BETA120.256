@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #36393f; /* Couleur de fond Discord sombre */
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    background-color: #202225; /* Couleur d'arrière-plan du conteneur */
+    border: 1px solid #40444b; /* Bordure du conteneur */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Ombre légère */
+}
+
+img {
+    max-width: 100%;
+    max-height: 400px; /* Taille maximale de l'image */
+    display: block; /* Pour centrer l'image horizontalement */
+    margin: 0 auto;
+}
+
+button {
+    background-color: #7289da; /* Couleur du bouton Discord */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px; /* Marge entre l'image et le bouton */
+    cursor: pointer;
+    border-radius: 5px;
+    display: block; /* Pour centrer le bouton horizontalement */
+    margin: 0 auto;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #7289da; /* Couleur du pop-up Discord */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1;
+    animation: fadeInOut 2s ease-in-out;
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    10%, 90% { opacity: 1; }
+}

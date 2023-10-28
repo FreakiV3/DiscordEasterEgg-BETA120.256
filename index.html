@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Image et Pop-up</title>
+</head>
+<body>
+    <div class="container">
+        <img src="images/getbanned.png" alt="Image getbanned">
+        <button id="copyButton">Copier l'image</button>
+    </div>
+    <div class="popup" id="popup">
+        <span>Envoie cette image à un contact sur Discord</span>
+    </div>
+
+    <script>
+        document.getElementById('copyButton').addEventListener('click', function() {
+            const imgSrc = document.querySelector('img').src;
+            navigator.clipboard.writeText(imgSrc).then(function() {
+                const popup = document.getElementById('popup');
+                popup.style.display = 'block';
+                setTimeout(function() {
+                    popup.style.display = 'none';
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+</html>
